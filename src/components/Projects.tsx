@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { Rocket } from "lucide-react";
-import ragbanner from ../assets/Rag-banner.jpg;
-import webtoon from ../assets/twebtoon-banner.jpg;
+import ragbanner from "../assets/Rag-banner.jpg";
+import webtoon from "../assets/twebtoon-banner.jpg";
 
 const projectsData = [
   {
