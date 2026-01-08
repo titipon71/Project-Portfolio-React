@@ -1,7 +1,7 @@
 import { Download, FileText, Award, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
-import resumePic from './assets/resume.png'
+import resumePic from "../assets/resume.png"
 
 const stats = [
   { icon: GraduationCap, label: "Education", value: "B.Tech" },
