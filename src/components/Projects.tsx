@@ -11,14 +11,14 @@ const projectsData = [
     techStack: ["FastAPI", "Llamaindex", "Redis", "Olama","MariaDB","Docker","ChromaDB","Python"],
     githubUrl: "https://github.com/titipon71/RAG_project_FastAPI.git",
     liveUrl: "https://lukeenortaed.site/",
-    imageUrl: {ragbanner}
+    imageUrl: ragbanner
   },
   {
     title: "Twebtoon - A Webtoon Platform",
     description: "A Twebtoon project based on the concept of a “Manga Browser/Reader” that uses Firebase as its real-time database and includes a home page, a list of recommended/latest updates, and a manga details page.",
     techStack: ["Flutter", "Firebase", "Dart", "Material Design"],
     githubUrl: "https://github.com/titipon71/Mini-Project-Flutter.git",
-    imageUrl: {webtoon}
+    imageUrl: webtoon
   }
   
 ];
