@@ -1,6 +1,7 @@
 import { Download, FileText, Award, GraduationCap, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
+import resumePic from "../assets/resume.png"
 
 const stats = [
   { icon: GraduationCap, label: "Education", value: "B.Tech" },
@@ -83,7 +84,7 @@ const Resume = () => {
               transition={{ duration: 0.3 }}
             >
               <img 
-                src="src/assets/resume.png" 
+                src={resumePic}
                 alt="Resume Preview" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
               />
