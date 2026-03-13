@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/titipon71", label: "GitHub", color: "hover:text-white hover:bg-white/10" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn", color: "hover:text-[#0A66C2] hover:bg-[#0A66C2]/10" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/titipon-kaorobtham/", label: "LinkedIn", color: "hover:text-[#0A66C2] hover:bg-[#0A66C2]/10" },
   { icon: Facebook, href: "https://www.facebook.com/YodTitipon/", label: "Facebook", color: "hover:text-[#1877F2] hover:bg-[#1877F2]/10" },
-  { icon: Mail, href: "mailto:titipon.kaorobtham@gmail.com", label: "Email", color: "hover:text-primary hover:bg-primary/10" },
+  { icon: Mail, href: "https://mail.google.com/mail/?view=cm&to=titipon.kaorobtham@gmail.com", label: "Email", color: "hover:text-primary hover:bg-primary/10" },
 ];
 
 const Footer = () => {

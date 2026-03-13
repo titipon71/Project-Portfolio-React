@@ -45,9 +45,9 @@ const Header = () => {
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.5 }}
             >
-              <Sparkles className="w-4 h-4 text-background" />
+              <Sparkles className="w-4 h-4 text-white" />
             </motion.div>
-            <span className="gradient-text">Portfolio</span>
+            <span className="gradient-text">My Portfolio</span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -63,7 +63,7 @@ const Header = () => {
               >
                 <span className="relative z-10">{link.name}</span>
                 <motion.div
-                  className="absolute inset-0 bg-primary/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
                   layoutId="navHover"
                 />
                 <span className="absolute bottom-1 left-4 right-4 h-px bg-gradient-to-r from-primary to-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
