@@ -8,7 +8,7 @@ const projectsData = [
   {
     title: "A Multi-User RAG Chatbot Platform with Room and Document Management (Backend Only)",
     description: "This project is a RAG-based chatbot system that allows multiple users to create chat rooms, manage documents, and interact with an AI-powered chatbot. It features user authentication, room creation, document uploads, and real-time chat functionality.",
-    techStack: ["FastAPI", "Llamaindex", "Redis", "Olama","MariaDB","Docker","ChromaDB","Python"],
+    techStack: ["FastAPI", "Llamaindex", "Redis", "Olama","MariaDB","Docker","LanceDB","Python","EasyOCR","TyphonOCR"],
     githubUrl: "https://github.com/titipon71/RAG_project_FastAPI.git",
     liveUrl: "https://lukeenortaed.site/",
     imageUrl: ragbanner
