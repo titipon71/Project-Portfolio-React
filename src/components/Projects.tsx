@@ -7,7 +7,7 @@ import webtoon from "../assets/twebtoon-banner.jpg";
 const projectsData = [
   {
     title: "A Multi-User RAG Chatbot Platform with Room and Document Management (Backend Only)",
-    description: "This project is a RAG-based chatbot system that allows multiple users to create chat rooms, manage documents, and interact with an AI-powered chatbot. It features user authentication, room creation, document uploads, and real-time chat functionality.",
+    description: "This project is a RAG-based chatbot system that allows multiple users to create chat rooms, manage documents, and interact with an AI-powered chatbot.",
     techStack: ["FastAPI", "Llamaindex", "Redis", "Olama","MariaDB","Docker","LanceDB","Python","EasyOCR","TyphonOCR"],
     githubUrl: "https://github.com/titipon71/RAG_project_FastAPI.git",
     liveUrl: "https://lukeenortaed.site/",
@@ -15,7 +15,7 @@ const projectsData = [
   },
   {
     title: "Twebtoon - A Webtoon Platform",
-    description: "A Twebtoon project based on the concept of a “Manga Browser/Reader” that uses Firebase as its real-time database and includes a home page, a list of recommended/latest updates, and a manga details page.",
+    description: "A Twebtoon project based on the concept of a “Manga Reader” that uses Firebase as its real-time database",
     techStack: ["Flutter", "Firebase", "Dart", "Material Design"],
     githubUrl: "https://github.com/titipon71/Mini-Project-Flutter.git",
     imageUrl: webtoon
