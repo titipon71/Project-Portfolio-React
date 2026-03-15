@@ -9,6 +9,7 @@ const transcriptPages = [
 ];
 
 const academicStats = [
+  { icon: Star, label: "GPA", value: "3.52", sub: "Cumulative" },
   { icon: Calendar, label: "Year", value: "3rd", sub: "In Progress" },
   { icon: BookOpen, label: "Credits", value: "64", sub: "Completed" },
 ];
@@ -93,7 +94,7 @@ const Transcript = () => {
             </div>
 
             {/* Academic stats */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               {academicStats.map((stat, index) => (
                 <motion.div
                   key={stat.label}

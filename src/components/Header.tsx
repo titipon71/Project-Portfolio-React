@@ -1,4 +1,4 @@
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, CircleCheckBig } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -42,12 +42,12 @@ const Header = () => {
           >
             <motion.div
               className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center"
-              whileHover={{ rotate: 180 }}
-              transition={{ duration: 0.5 }}
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 1 }}
             >
-              <Sparkles className="w-4 h-4 text-white" />
+              <CircleCheckBig className="w-4 h-4 text-white" />
             </motion.div>
-            <span className="gradient-text">My Portfolio</span>
+            <span className="gradient-text">Titipon.K</span>
           </motion.a>
 
           {/* Desktop Navigation */}

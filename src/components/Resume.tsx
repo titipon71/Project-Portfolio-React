@@ -6,9 +6,8 @@ import resumePic from "../assets/resume.png";
 import ImageModal from "./ImageModal";
 
 const stats = [
-  { icon: GraduationCap, label: "Education", value: "B.Eng", sub: "Electronic Technology" },
-  { icon: Briefcase, label: "Projects", value: "2+", sub: "Completed" },
-  { icon: Award, label: "GPA", value: "3.5+", sub: "Cumulative" },
+  { icon: GraduationCap, label: "Electronic Technology", value: "B.Ind.Tech.", sub: "Computer" },
+  { icon: Briefcase, label: "Projects", value: "2+", sub: "Completed" }
 ];
 
 const highlights = [
@@ -82,7 +81,7 @@ const Resume = () => {
             </div>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 gap-3">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}

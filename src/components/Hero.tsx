@@ -1,14 +1,17 @@
-import { ArrowDown, Mail, Sparkles, Code2, Database, Cpu } from "lucide-react";
+import { ArrowDown, Mail, Sparkles, Code2, Database, Cpu, Laptop } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const floatingIcons = [
   { Icon: Code2, delay: 0, x: "10%", y: "20%" },
   { Icon: Database, delay: 0.5, x: "85%", y: "30%" },
   { Icon: Cpu, delay: 1, x: "15%", y: "70%" },
   { Icon: Sparkles, delay: 1.5, x: "80%", y: "75%" },
+  { Icon: Laptop, delay: 2, x: "50%", y: "20%" }
 ];
+
+const roles = ["Backend Developer", "Web Developer", "Flutter Developer", "Software Tester"];
 
 const Hero = () => {
   const ref = useRef(null);
@@ -20,6 +23,36 @@ const Hero = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && displayed.length < currentRole.length) {
+      // Typing
+      timeout = setTimeout(() => {
+        setDisplayed(currentRole.slice(0, displayed.length + 1));
+      }, 80);
+    } else if (!isDeleting && displayed.length === currentRole.length) {
+      // Pause before deleting
+      timeout = setTimeout(() => setIsDeleting(true), 1800);
+    } else if (isDeleting && displayed.length > 0) {
+      // Deleting
+      timeout = setTimeout(() => {
+        setDisplayed(currentRole.slice(0, displayed.length - 1));
+      }, 45);
+    } else if (isDeleting && displayed.length === 0) {
+      // Move to next role
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, roleIndex]);
+
   return (
     <section id="home" ref={ref} className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated gradient mesh background */}
@@ -27,11 +60,8 @@ const Hero = () => {
       
       {/* Animated orbs */}
       <motion.div className="absolute inset-0 overflow-hidden" style={{ y }}>
-        {/* Primary glow orb */}
         <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/30 rounded-full blur-[120px] animate-blob" />
-        {/* Secondary glow orb */}
         <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-accent/20 rounded-full blur-[100px] animate-blob-delayed" />
-        {/* Center subtle glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] animate-pulse-glow" />
       </motion.div>
 
@@ -97,7 +127,11 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
-          <span className="text-xl sm:text-2xl font-medium gradient-text">Backend Developer</span>
+          {/* Typing Effect */}
+          <span className="text-xl sm:text-2xl font-medium gradient-text inline-flex items-center min-w-[220px]  gap-1 justify-center">
+            <span style={{ color: 'initial' }}>🖥️</span> {displayed}
+            <span className="ml-0.5 inline-block w-[2px] h-[1.2em] bg-primary align-middle animate-pulse" />
+          </span>
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </motion.div>
 
@@ -110,7 +144,7 @@ const Hero = () => {
           Currently studying at{" "}
           <span className="text-foreground font-medium">King Mongkut's University of Technology North Bangkok</span>
           <br />
-          Bachelor of Engineering in Electronic Technology (Computer Specialization)
+          Bachelor's Degree in Electronics and Computer Technology
         </motion.p>
 
         <motion.div 
